@@ -4,33 +4,37 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
 
 <body class="page__body">
   <header class="header">
-    <a class="header__logo" href="#">
-      <img src="img/logos/pink-header-logo.svg" alt="Логотип Pink" width="74" height="23">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
+    <div class="header__wrapper">
+      <a class="header__logo" href="#">
+        <img src="img/logos/pink-header-logo.svg" alt="Логотип Pink" width="74" height="23">
+      </a>
+      <button class="header__nav-toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class=main-nav__list-item>
-            <a href="#">Главная</a>
-          </li>
-          <li class=main-nav__list-item>
-            <a href="#">Фотографии</a>
-          </li>
-          <li class=main-nav__list-item>
-            <a href="#">Конкурс</a>
-          </li>
-          <li class="main-nav__list-item">
-            <a href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </div>
+    </div>
+    <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class=main-nav__list-item>
+              <a href="#">Главная</a>
+            </li>
+            <li class=main-nav__list-item>
+              <a href="#">Фотографии</a>
+            </li>
+            <li class=main-nav__list-item>
+              <a href="#">Конкурс</a>
+            </li>
+            <li class="main-nav__list-item">
+              <a href="#">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
     </nav>
   </header>
   <main class="page__main">
@@ -115,9 +119,9 @@
           </li>
         </ul>
         <p class="feedback__buttons slider__buttons">
-          <button class="slider__button slider__toggle--current" type="button">1</button>
-          <button class="slider__button" type="button">2</button>
-          <button class="slider__button" type="button">3</button>
+          <button class="slider__button slider__button--current" type="button"><span class="visually-hidden">1</span></button>
+          <button class="slider__button" type="button"><span class="visually-hidden">2</span></button>
+          <button class="slider__button" type="button"><span class="visually-hidden">3</span></button>
         </p>
       </div>
     </section>
@@ -155,9 +159,9 @@
           </li>
         </ul>
         <p class="pricing__buttons slider__buttons">
-          <button class="slider__button" type="button">1</button>
-          <button class="slider__button slider__toggle--current" type="button">2</button>
-          <button class="slider__button" type="button">3</button>
+          <button class="slider__button" type="button"><span class="visually-hidden">1</span></button>
+          <button class="slider__button slider__button--current" type="button"><span class="visually-hidden">2</span></button>
+          <button class="slider__button" type="button"><span class="visually-hidden">3</span></button>
         </p>
       </div>
     </section>

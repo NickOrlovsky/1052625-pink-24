@@ -1,0 +1,94 @@
+.editor {
+  background-color: @background-gray;
+}
+
+.editor__wrapper {
+  padding: 20px 20px 40px;
+}
+
+.editor__image {
+  margin: 0;
+}
+
+.editor__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  margin-bottom: 38px;
+  padding: 0;
+
+  list-style: none;
+
+  border-bottom: 1px solid @editor-inner-border;
+}
+
+.editor__list-item {
+  padding-bottom: 34px;
+}
+
+// .editor__list-item--active {
+// }
+
+.editor__tools-btn {
+  margin-bottom: 39px;
+
+  border: none;
+  background-color: none;
+
+  cursor: pointer;
+}
+
+.editor__buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.editor__button {
+  max-width: 280px;
+  width: 100%;
+  min-height: 55px;
+  box-sizing: border-box;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+
+  background-color: none;
+  border-radius: 30px;
+
+  &--upload {
+    margin-bottom: 12px;
+
+    color: @coral-red;
+    border: 3px solid @coral-red;
+  }
+
+  &--upload:hover {
+    color: @basic-white;
+    background-color: @coral-red;
+  }
+
+  &--upload:active {
+    color: @editor-pale-post;
+  }
+
+  &--cancel {
+    color: @editor-pale;
+    border: 3px solid @editor-pale;
+  }
+
+  &--cancel:hover {
+    color: @slider-btn;
+    border: 3px solid @slider-btn;
+  }
+
+  //Нужно преределать цвета для этой кнопки
+  &--cancel:active {
+    color: @editor-pale-post;
+    background-color: @slider-btn;
+    border: 3px solid @slider-btn;
+  }
+}
+
