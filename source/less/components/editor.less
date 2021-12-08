@@ -84,7 +84,6 @@
     border: 3px solid @slider-btn;
   }
 
-  //Нужно преределать цвета для этой кнопки
   &--cancel:active {
     color: @editor-pale-post;
     background-color: @slider-btn;
@@ -92,3 +91,10 @@
   }
 }
 
+.editor__range-wrapper {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
