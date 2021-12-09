@@ -1,0 +1,43 @@
+.main-nav {
+  // display: none;
+  background-color: @basic-font;
+}
+// .main-nav__toggle {
+// }
+
+// .main-nav__wrapper {
+// }
+
+.main-nav__list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.main-nav__list-item {
+
+  border-top: 1px solid @header-border-top;
+  border-bottom: 1px solid @basic-black;
+
+  & a {
+    display: block;
+
+    max-height: 63px;
+    padding: 20px 0;
+    box-sizing: border-box;
+
+    color: @basic-white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  & a:hover {
+    color: @coral-red;
+  }
+
+  & a:active {
+    color: @coral-red-active;
+  }
+}
