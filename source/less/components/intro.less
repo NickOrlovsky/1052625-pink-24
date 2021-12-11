@@ -7,6 +7,15 @@
 
 .intro__wrapper {
   padding: 95px 20px 38px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 300px;
+    padding: 102px 20px 119px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 114px 130px 130px;
+  }
 }
 
 .intro__header {
@@ -33,6 +42,7 @@
 
   margin-bottom: 32px;
   padding: 21px 38px;
+  box-sizing: border-box;
 
   font-size: 18px;
   line-height: 18px;

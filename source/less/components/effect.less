@@ -1,0 +1,59 @@
+.effect {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.effect__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 54px 20px 54px;
+
+  @media (min-width: @desktop-width) {
+    padding: 17px 166px 67px 131px;
+  }
+}
+
+.effect__time-logo {
+  width: 238px;
+  height: 276px;
+
+  @media (min-width: @desktop-width) {
+    width: 298px;
+    height: 345px;
+  }
+}
+
+
+.effect__headline {
+  margin: 0;
+  margin-bottom: 24px;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 37px;
+  }
+}
+
+.effect__text {
+  margin: 0;
+  margin-bottom: 24px;
+
+  font-size: 14px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 47px;
+  }
+}
+
+.effect__link {
+  display: block;
+
+  color: @coral-red;
+}

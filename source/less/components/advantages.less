@@ -13,19 +13,99 @@
 .advantages__slogan {
   margin: 0;
   padding: 46px 20px 70px;
+
   font-size: 24px;
   line-height: 28.8px;
   font-weight: 300;
   text-align: center;
 }
 
-.advantages__list {
+.advantages__list-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0 20px 0;
+
+  background: @background-gray;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.advantages__screen-list {
+  order: 2;
+
   margin: 0;
-  padding: 55px 20px 325px;
+  padding: 0;
+  box-sizing: border-box;
 
   list-style: none;
 
-  background: @background-gray url("../img/backgrounds/phone-smile-bg.png") no-repeat 50% 110%;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+    order: 0;
+
+    width: 45%;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 876px;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.advantages__screen-item {
+  display: none;
+
+  &--visible {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.advantages__screen-img {
+  width: 157px;
+  height: 320px;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    width: 268px;
+    height: 547px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 186px;
+    height: 382px;
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 55px 0 48px;
+
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+
+    width: 55%;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
 }
 
 .advantages__list-item {
