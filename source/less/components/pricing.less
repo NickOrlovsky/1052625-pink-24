@@ -29,6 +29,10 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-bottom: 0;
   }
+
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+  }
 }
 
 .pricing__list-item {
@@ -51,6 +55,15 @@
 
   & > p:last-of-type {
     border-bottom: 2px solid @pricing-border-cell;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    display: none;
+
+    &--current {
+      display: block;
+      width: 100%;
+    }
   }
 }
 
@@ -114,8 +127,6 @@
   transform: rotate(-45deg);
 }
 
-// .pricing__list-item--current {
-// }
 
 .pricing__buttons {
   margin: 0;
