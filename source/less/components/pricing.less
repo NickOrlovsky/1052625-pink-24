@@ -3,15 +3,7 @@
 }
 
 .pricing__wrapper {
-  padding: 82px 0 49px;
-
-  @media (min-width: @tablet-width) {
-    padding: 56px 20px 70px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 56px 130px 98px;
-  }
+  box-sizing: border-box;
 }
 
 
@@ -21,7 +13,7 @@
 
   margin: 0;
   margin-bottom: 45px;
-  padding: 0;
+  padding: 82px 0 49px;
   width: 100%;
 
   list-style: none;
@@ -31,6 +23,11 @@
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-bottom: 0;
+    padding: 56px 0 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 56px 0 98px;
   }
 
   @media (max-width: @mobile-width-only) {

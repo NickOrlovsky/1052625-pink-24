@@ -12,14 +12,15 @@
 <body class="page__body">
   <header class="header">
     <div class="header__wrapper container">
-      <a class="header__logo" href="#">
-        <img src="img/logos/pink-header-logo.svg" alt="Логотип Pink" width="74" height="23">
-      </a>
-      <button class="header__nav-toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+        <a class="header__logo" href="#">
+          <img src="img/logos/pink-header-logo.svg" alt="Логотип Pink" width="74" height="23">
+        </a>
+        <button class="header__nav-toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
     </div>
     <nav class="main-nav">
+      <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class=main-nav__list-item>
             <a href="#">Главная</a>
@@ -34,12 +35,13 @@
             <a href="#">HTML Academy</a>
           </li>
         </ul>
+      </div>
     </nav>
   </header>
   <main class="page__main">
     <h1 class="visually-hidden"> Pink - наше приложение</h1>
     <section class="intro">
-      <div class="intro__wrapper">
+      <div class="intro__wrapper container">
         <h2 class="visually-hidden">Скачать приложение</h2>
         <div class="intro__header">
           <p class="intro__slogan">Взгляните на жизнь
@@ -72,17 +74,19 @@
         </div>
       </div>
     </section>
+    <div class="main-slogan">
+      <div class="main-slogan__wrapper container">
+        <p class="main-slogan__text">
+          Устали от серости мегаполиса?
+          <br>
+          Нам есть, что вам
+          предложить!
+        </p>
+      </div>
+    </div>
     <section class="advantages">
-      <div class="advantages__wrapper">
+      <div class="advantages__wrapper container">
         <h2 class="visually-hidden">Наши предложения</h2>
-        <div class="advantages__header">
-          <p class="advantages__slogan">
-            Устали от серости мегаполиса?
-            <br>
-            Нам есть, что вам
-            предложить!
-          </p>
-        </div>
         <div class="advantages__list-wrapper">
           <ul class="advantages__list">
             <li class="advantages__list-item">
@@ -121,7 +125,7 @@
       </div>
     </section>
     <section class="feedback">
-      <div class="feedback__wrapper">
+      <div class="feedback__wrapper container">
         <h2 class="visually-hidden">Отзывы о нас</h2>
         <ul class="feedback__list slider-list">
           <li class="feedback__list-item feedback__list-item--current slider-list__item">
@@ -145,7 +149,7 @@
       </div>
     </section>
     <section class="pricing">
-      <div class="pricing__wrapper">
+      <div class="pricing__wrapper container">
         <h2 class="visually-hidden">Наши цены</h2>
         <ul class="pricing__list slider-list">
           <li class="pricing__list-item pricing__side-legend slider-list__item">
@@ -190,7 +194,7 @@
       </div>
     </section>
     <section class="contacts">
-      <div class="contacts__wrapper">
+      <div class="contacts__wrapper container">
         <h2 class="visually-hidden">Наши контакты</h2>
         <p class="contacts__slogan">
           Остались вопросы? Свяжитесь с нами!
@@ -210,15 +214,18 @@
               Конюшенная, 19/8</a>
           </li>
         </ul>
-        <p class="contacts__map-wrapper">
-          <img class="contacts__map-img" src="img/map/map.jpg" alt="Карта указывающая адресс ул. Большая
-          Конюшенная, 19/8">
-        </p>
       </div>
+      <section class="map">
+        <h2 class="visually-hidden">Как нас найти?</h2>
+        <p class="map__wrapper">
+          <img class="map__img" src="img/map/map.jpg" alt="Карта указывающая адресс ул. Большая
+          Конюшенная, 19/8" width="1200" height="502">
+        </p>
+      </section>
     </section>
   </main>
   <footer class="footer">
-    <div class="footer__wrapper">
+    <div class="footer__wrapper container">
       <p class="footer__logo">
         <a class="footer__logo-link" href="#">
           <img src="img/logos/pink-footer-logo.svg" alt="Логотип и надпись Pink">
