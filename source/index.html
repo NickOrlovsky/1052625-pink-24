@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1 /">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
@@ -10,37 +11,37 @@
 
 <body class="page__body">
   <header class="header">
-    <div class="header__wrapper">
-      <a class="header__logo" href="#">
-        <img src="img/logos/pink-header-logo.svg" alt="Логотип Pink" width="74" height="23">
-      </a>
-      <button class="header__nav-toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+    <div class="header__wrapper container">
+        <a class="header__logo" href="#">
+          <img src="img/logos/pink-header-logo.svg" alt="Логотип Pink" width="74" height="23">
+        </a>
+        <button class="header__nav-toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
     </div>
     <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class=main-nav__list-item>
-              <a href="#">Главная</a>
-            </li>
-            <li class=main-nav__list-item>
-              <a href="#">Фотографии</a>
-            </li>
-            <li class=main-nav__list-item>
-              <a href="#">Конкурс</a>
-            </li>
-            <li class="main-nav__list-item">
-              <a href="#">HTML Academy</a>
-            </li>
-          </ul>
-        </div>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class=main-nav__list-item>
+            <a href="#">Главная</a>
+          </li>
+          <li class=main-nav__list-item>
+            <a href="#">Фотографии</a>
+          </li>
+          <li class=main-nav__list-item>
+            <a href="#">Конкурс</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="#">HTML Academy</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
   <main class="page__main">
     <h1 class="visually-hidden"> Pink - наше приложение</h1>
     <section class="intro">
-      <div class="intro__wrapper">
+      <div class="intro__wrapper container">
         <h2 class="visually-hidden">Скачать приложение</h2>
         <div class="intro__header">
           <p class="intro__slogan">Взгляните на жизнь
@@ -73,42 +74,64 @@
         </div>
       </div>
     </section>
+    <div class="main-slogan">
+      <div class="main-slogan__wrapper container">
+        <p class="main-slogan__text">
+          Устали от серости мегаполиса?
+          <br>
+          Нам есть, что вам
+          предложить!
+        </p>
+      </div>
+    </div>
     <section class="advantages">
-      <div class="advantages__wrapper">
+      <div class="advantages__wrapper container">
         <h2 class="visually-hidden">Наши предложения</h2>
-        <div class="advantages__header">
-          <p class="advantages__slogan">
-            Устали от серости мегаполиса?
-            <br>
-            Нам есть, что вам
-            предложить!
-          </p>
+        <div class="advantages__list-wrapper">
+          <ul class="advantages__list">
+            <li class="advantages__list-item">
+              <h3 class="advantages__title">Поднимает настроение</h3>
+              <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
+                несколько кликов!</p>
+              <img class="advantages__img" src="img/content/screen-gray.png" alt="Серый экран">
+            </li>
+            <li class="advantages__list-item">
+              <h3 class="advantages__title">Меняет мир вокруг</h3>
+              <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
+                усилить эффект</p>
+              <img class="advantages__img" src="img/content/screen-pink.png" alt="Розовый экран">
+            </li>
+            <li class="advantages__list-item">
+              <h3 class="advantages__title">Заводит новых друзей</h3>
+              <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите
+                новых</p>
+              <img class="advantages__img advantages__img--visible" src="img/content/screen-smile.png" alt="Розовый экран со смайликом">
+            </li>
+          </ul>
         </div>
-        <ul class="advantages__list">
-          <li class="advantages__list-item">
-            <h3 class="advantages__title">Поднимает настроение</h3>
-            <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
-              несколько кликов!</p>
-          </li>
-          <li class="advantages__list-item">
-            <h3 class="advantages__title">Меняет мир вокруг</h3>
-            <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
-              усилить эффект</p>
-          </li>
-          <li class="advantages__list-item">
-            <h3 class="advantages__title">Заводит новых друзей</h3>
-            <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите
-              новых</p>
-          </li>
-        </ul>
+        <div class="effect">
+          <div class="effect__wrapper">
+            <img class="effect__time-logo" src="img/graphics/timer.svg" alt="Таймер" width="238" height="276">
+          <div class="effect__text-wrapper">
+            <h3 class="effect__headline">Эффект
+              на 24 часа!</h3>
+            <p class="effect__text">Британские ученые провели исследования
+              и доказали, что положительный эффект
+              от использования приложения длится целые сутки!</p>
+            <a class="effect__link" href="#">Узнать больше об исследовании</a>
+          </div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="feedback">
-      <div class="feedback__wrapper">
+      <div class="feedback__wrapper container">
         <h2 class="visually-hidden">Отзывы о нас</h2>
         <ul class="feedback__list slider-list">
           <li class="feedback__list-item feedback__list-item--current slider-list__item">
-            <b class="feedback__title">Николай Петров</b>
+            <b class="feedback__title">Николай Петров<br>
+              <span class="feedback__title-job">25 лет, водитель трамвая</span>
+            </b>
             <blockquote class="feedback__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на
               привычные
               серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
@@ -126,9 +149,14 @@
       </div>
     </section>
     <section class="pricing">
-      <div class="pricing__wrapper">
+      <div class="pricing__wrapper container">
         <h2 class="visually-hidden">Наши цены</h2>
         <ul class="pricing__list slider-list">
+          <li class="pricing__list-item pricing__side-legend slider-list__item">
+            <p>Розовый фильтр</p>
+            <p>Смайлики</p>
+            <p>Комментарии</p>
+          </li>
           <li class="pricing__list-item slider-list__item">
             <div class="pricing__headline">
               <h3>База</h3>
@@ -166,7 +194,7 @@
       </div>
     </section>
     <section class="contacts">
-      <div class="contacts__wrapper">
+      <div class="contacts__wrapper container">
         <h2 class="visually-hidden">Наши контакты</h2>
         <p class="contacts__slogan">
           Остались вопросы? Свяжитесь с нами!
@@ -186,15 +214,18 @@
               Конюшенная, 19/8</a>
           </li>
         </ul>
-        <p class="contacts__map">
-          <img src="img/map/map.jpg" alt="Карта указывающая адресс ул. Большая
-          Конюшенная, 19/8" width="320" height="200">
-        </p>
       </div>
+      <section class="map">
+        <h2 class="visually-hidden">Как нас найти?</h2>
+        <p class="map__wrapper">
+          <img class="map__img" src="img/map/map.jpg" alt="Карта указывающая адресс ул. Большая
+          Конюшенная, 19/8" width="1200" height="502">
+        </p>
+      </section>
     </section>
   </main>
   <footer class="footer">
-    <div class="footer__wrapper">
+    <div class="footer__wrapper container">
       <p class="footer__logo">
         <a class="footer__logo-link" href="#">
           <img src="img/logos/pink-footer-logo.svg" alt="Логотип и надпись Pink">

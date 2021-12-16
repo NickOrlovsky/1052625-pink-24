@@ -3,15 +3,36 @@
 }
 
 .pricing__wrapper {
-  padding: 82px 0 49px;
+  box-sizing: border-box;
 }
 
+
 .pricing__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
   margin: 0;
   margin-bottom: 45px;
-  padding: 0;
+  padding: 82px 0 49px;
+  width: 100%;
 
   list-style: none;
+
+  overflow-x: auto;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 0;
+    padding: 56px 0 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 56px 0 98px;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+  }
 }
 
 .pricing__list-item {
@@ -20,11 +41,11 @@
   & > p {
     margin: 0;
     padding: 20px 20px 20px;
-    max-height: 59px;
     box-sizing: border-box;
 
     text-transform: uppercase;
 
+    background-color: @basic-white;
     border: 1px solid @pricing-border-cell;
   }
 
@@ -35,9 +56,35 @@
   & > p:last-of-type {
     border-bottom: 2px solid @pricing-border-cell;
   }
+
+  @media (max-width: @mobile-width-only) {
+    min-width: 276px;
+
+    &--current {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.pricing__side-legend {
+  display: none;
+
+  background-color: @background-gray;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  & p:first-of-type {
+    border-top: 2px solid @pricing-border-cell;
+  }
 }
 
 .pricing__headline {
+  position: relative;
 
   color: @basic-white;
   text-align: center;
@@ -47,6 +94,7 @@
   background-color: @basic-font;
   border-left: 1px solid @background-gray;
   border-right: 1px solid @background-gray;
+  overflow: hidden;
 
   h3 {
     margin: 0;
@@ -64,6 +112,10 @@
 }
 
 .pricing__label-hit {
+  position: absolute;
+  top: 5px;
+  left: -35px;
+
   width: 105px;
   padding: 5px 0;
   margin: 0;
@@ -72,11 +124,14 @@
   font-weight: 400;
 
   background-color: @coral-red;
+  transform: rotate(-45deg);
 }
 
-// .pricing__list-item--current {
-// }
 
 .pricing__buttons {
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
