@@ -3,31 +3,48 @@
 // }
 
 .journey__wrapper {
-  padding: 54px 0 26px;
+  padding-top: 54px;
+  padding-bottom: 26px;
+
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
 }
 
 .journey__form-text {
-  padding: 0 20px;
-
   line-height: 30px;
   text-align: center;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 84px;
+  }
 }
 
 .journey__form {
-  fieldset {
-    padding: 42px 20px 44px;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
 
-    margin: 0;
-    border: none;
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 
-    &:nth-of-type(2n) {
-      background-color: @background-gray;
-    }
+    margin: 0 auto;
+    max-width: 940px;
   }
 
   textarea {
     margin-top: 10px;
-    max-width: 276px;
     width: 100%;
     padding: 22px 25px 22px 20px;
     box-sizing: border-box;
@@ -39,19 +56,152 @@
 
     border: 2px solid @background-gray;
     outline: none;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 0;
+    }
+  }
+}
+
+.journey__fieldset {
+  padding-top: 42px;
+  padding-bottom: 44px;
+
+  margin: 0;
+  border: none;
+
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    border: 2px solid @pricing-border-cell;
+    border-radius: 3px;
+    background-color: none;
+  }
+}
+
+.journey__full-name {
+  @media (min-width: @tablet-width) {
+    order: 1;
+
+    & fieldset {
+      border: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 15px;
+  }
+}
+
+.journey__achievements {
+  background-color: @background-gray;
+
+  @media (min-width: @tablet-width) {
+    order: 4;
+
+    background-color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/-1;
+  }
+}
+
+.journey__contacts {
+  @media (min-width: @tablet-width) {
+    order: 3;
+
+    padding-top: 46px;
+    padding-bottom: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/-1;
+
+    padding-top: 44px;
+    padding-bottom: 23px;
+  }
+}
+
+.journey__app {
+  background-color: @background-gray;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+
+    background-color: @basic-white;
+  }
+}
+
+.journey__emotions {
+  @media (min-width: @tablet-width) {
+    order: 5;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/-1;
+  }
+
+  & fieldset {
+    @media (min-width: @tablet-width) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+}
+
+.journey__button-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    order: 6;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/-1;
   }
 }
 
 .journey__field-list {
   margin: 0;
-  padding: 0;
+  padding: 0 22px;
 
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+  }
+
+  &--contacts {
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 74px;
+    }
+  }
+
+  &--full-name {
+    padding: 0;
+  }
 }
 
 .journey__field-item {
   display: flex;
   flex-direction: column;
+
+  margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 58px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   & label {
     margin-bottom: 10px;
@@ -59,11 +209,14 @@
     color: @coral-red;
     text-transform: uppercase;
     line-height: 30px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
   }
 
   & input {
-    margin-bottom: 30px;
-    max-width: 276px;
     width: 100%;
     min-height: 59px;
     padding-left: 20px;
@@ -87,22 +240,70 @@
   & input::placeholder {
     color: @basic-font;
   }
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &--contacts {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      & label {
+        order: 2;
+      }
+
+      & input {
+        order: 1;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .journey__legend {
-  float: left;
+  margin-bottom: 45px;
 
   color: @coral-red;
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
+
+  transform: translateY(45px);
+
+  @media (min-width: @tablet-width) {
+    padding: 0 25px;
+    margin-bottom: 0;
+
+    transform: none;
+  }
+}
+
+.journey__legend-textarea {
+  margin-bottom: 0;
 }
 
 .journey__checkbox-list {
   margin: 0;
-  padding: 0;
+  padding: 0 22px;
 
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .journey__checkbox-item {
@@ -121,9 +322,13 @@
 
 .journey__radio-list {
   margin: 0;
-  padding: 0;
+  padding: 0 22px;
 
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+  }
 }
 
 .journey__radio-item {
@@ -143,11 +348,14 @@
 
 .journey__submit-button {
   margin-bottom: 46px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .journey__submit-button,
 .journey__modal-button {
-  max-width: 280px;
   width: 100%;
   min-height: 63px;
   padding: 0;
@@ -174,14 +382,16 @@
   margin: 0;
 
   text-transform: uppercase;
+  text-align: center;
 }
 
 .color-red {
   color: @coral-red;
 }
 
-// .journey__modal {
-// }
+.journey__modal {
+  box-shadow: 0 0 5px rgb(0 1 1 / 15%);
+}
 
 
 .journey__modal-wrapper {
@@ -201,6 +411,10 @@
 .journey__modal-text {
   margin: 0;
   margin-bottom: 48px;
+
+  &--compact {
+    margin-bottom: 0;
+  }
 }
 
 // .journey__modal-button {

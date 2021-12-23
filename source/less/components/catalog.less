@@ -2,9 +2,9 @@
 
 // }
 
-.catalog__wrapper {
-  padding: 0 20px;
-}
+// .catalog__wrapper {
+
+// }
 
 .catalog__text {
   margin: 0;
@@ -14,39 +14,42 @@
   text-align: center;
 }
 
-.catalog__list {
+.catalog__panorama {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.catalog__panorma-image {
+  position: relative;
+
+  display: flex;
+
   margin: 0;
-  padding: 0;
+  height: auto;
 
-  list-style: none;
-}
-
-.catalog__list-item {
-
-  background-color: @background-gray;
-}
-
-// .catalog__list-item--main {
-
-// }
-
-.catalog__inner-wrapper {
-  padding: 25px 17px 26px 10px;
-}
-
-.catalog__image {
-  margin: 0;
-  max-height: 180px;
-  height: 100%;
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .catalog__label {
+  position: absolute;
+  top: 0;
+  right: 5%;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
   max-width: 140px;
   max-height: 36px;
+  width: 100%;
+  height: 100%;
 
   box-sizing: border-box;
 
@@ -57,6 +60,55 @@
   font-weight: 700;
 
   background-color: @coral-red;
+
+  @media (min-width: @tablet-width) {
+    top: 10%;
+  }
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 54px 20px;
+  }
+}
+
+.catalog__list-item {
+  display: flex;
+  flex-direction: column;
+
+  background-color: @background-gray;
+}
+
+.catalog__inner-wrapper {
+  position: relative;
+
+  padding: 25px 17px 26px 10px;
+  background-color: @background-gray;
+}
+
+.catalog__image {
+  margin: 0;
+
+  & img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
 }
 
 .catalog__name {
@@ -76,12 +128,42 @@
   margin-bottom: 20px;
 }
 
-.catalog__like {
+.catalog__like-wrapper {
+  display: flex;
+
   font-size: 12px;
   color: @coral-red;
   text-transform: uppercase;
 
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--panorama {
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      top: 10%;
+      right: 5%;
+    }
+  }
+}
+
+.catalog__like-icon {
   background-color: none;
   border: none;
+
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+}
+
+.catalog__like-text {
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
 }
