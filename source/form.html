@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1 /">
   <title>Pink - Формы регистрации</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
@@ -11,38 +12,38 @@
 
 <body class="page__body">
   <header class="header">
-    <div class="header__wrapper">
-      <a class="header__logo" href="#">
-        <img src="img/logos/pink-header-logo.svg" alt="Логотип Pink" width="74" height="23">
-      </a>
-      <button class="header__nav-toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+    <div class="header__wrapper container">
+        <a class="header__logo" href="#">
+          <img src="img/logos/pink-header-logo.svg" alt="Логотип Pink" width="74" height="23">
+        </a>
+        <button class="header__nav-toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
     </div>
     <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class=main-nav__list-item>
-              <a href="#">Главная</a>
-            </li>
-            <li class=main-nav__list-item>
-              <a href="#">Фотографии</a>
-            </li>
-            <li class=main-nav__list-item>
-              <a href="#">Конкурс</a>
-            </li>
-            <li class="main-nav__list-item">
-              <a href="#">HTML Academy</a>
-            </li>
-          </ul>
-        </div>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class=main-nav__list-item>
+            <a href="#">Главная</a>
+          </li>
+          <li class=main-nav__list-item>
+            <a href="#">Фотографии</a>
+          </li>
+          <li class=main-nav__list-item>
+            <a href="#">Конкурс</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="#">HTML Academy</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 </body>
 <main class="page__main">
   <h1 class="visually-hidden">Каталог фотографий наших пользователей</h1>
   <section class="intro">
-    <div class="intro__wrapper">
+    <div class="intro__wrapper intro__slogan-wrapper container">
       <p class="intro__slogan">
         Конкурс на самое
         безбашенное
@@ -52,110 +53,125 @@
   <section class="journey">
     <h2 class="visually-hidden">Форма для вашего путешествия</h2>
     <div class="journey__wrapper">
-      <div class="journey__form-text">
+      <div class="journey__form-text container">
         Поделитесь своей историей и получите
         шанс выиграть ценный приз — 1000
         миль на вашу бонусную карту!
       </div>
       <form class="journey__form" action="https://echo.htmlacademy.ru" method="get">
-        <fieldset>
-          <ul class="journey__field-list">
-            <li class="journey__field-item">
-              <label for="surname">ФАМИЛИЯ:</label>
-              <input type="text" name="surname" id="surname" placeholder="Введите вашу фамилию*" required>
-            </li>
-            <li class="journey__field-item">
-              <label for="name">ИМЯ:</label>
-              <input type="text" name="name" id="name" placeholder="Введите ваше имя*">
-            </li>
-            <li class="journey__field-item">
-              <label for="fathers-name">ОТЧЕСТВО:</label>
-              <input type="text" name="fathers-name" id="fathers-name" placeholder="Ну и отчество тоже" required>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset>
-          <legend class="journey__legend">Ваши безбашенные
-            достижения в путешествии</legend>
-          <ul class="journey__checkbox-list">
-            <li class="journey__checkbox-item">
-              <input type="checkbox" name="selfie" id="selfie" checked>
-              <label for="selfie">Сделал селфи с акулой</label>
-            </li>
-            <li class="journey__checkbox-item">
-              <input type="checkbox" name="burned" id="burned" checked>
-              <label for="burned">Обгорел на пляже</label>
-            </li>
-            <li class="journey__checkbox-item">
-              <input type="checkbox" name="chuck" id="chuck">
-              <label for="chuck">Видел Чака Норриса</label>
-            </li>
-            <li class="journey__checkbox-item">
-              <input type="checkbox" name="souvenir" id="souvenir">
-              <label for="souvenir">Накупил сувениров</label>
-            </li>
-            <li class="journey__checkbox-item">
-              <input type="checkbox" name="tower" id="tower" checked>
-              <label for="tower">Удержал башню</label>
-            </li>
-            <li class="journey__checkbox-item">
-              <input type="checkbox" name="hotel" id="hotel">
-              <label for="hotel">Разгромил отель</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset>
-          <ul class="journey__field-list">
-            <li class="journey__field-item">
-              <label for="phone-number">НОМЕР ТЕЛЕФОНА</label>
-              <input type="tel" name="phone-number" id="phone-number" placeholder="Номер, пожалуйста">
-            </li>
-            <li class="journey__field-item">
-              <label for="email-address">АДРЕС ПОЧТЫ</label>
-              <input type="email" name="email" id="email-address" placeholder="Введите почту *" required>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset>
-          <legend class="journey__legend">С каким приложением
-            путешествовали?</legend>
-          <ul class="journey__radio-list">
-            <li class="journey__radio-item">
-              <input type="radio" name="software" id="for-ios" value="ios">
-              <label for="for-ios">Pink для iOS</label>
-            </li>
-            <li class="journey__radio-item">
-              <input type="radio" name="software" id="for-android" value="android">
-              <label for="for-android">Pink на Android</label>
-            </li>
-            <li class="journey__radio-item">
-              <input type="radio" name="software" id="for-windows" value="windows">
-              <label for="for-windows">Windows Phone</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset>
-          <legend class="journey__legend">ОПИШИТЕ СВОИ ЭМОЦИИ</legend>
-          <label for="emotions">
-            <textarea name="feedback" id="emotions" cols="30"
-              rows="10">Можно прям в красках, не стесняясь в выражениях</textarea>
-          </label>
-        </fieldset>
-        <button class="button journey__submit-button" type="submit">
-          Отправить форму
-        </button>
-        <p class="journey__note">
-          <span class="color-red">*</span> — обязательные поля
-        </p>
+        <div class="container journey__full-name">
+          <fieldset class="journey__fieldset">
+            <ul class="journey__field-list journey__field-list--full-name">
+              <li class="journey__field-item">
+                <label for="surname">ФАМИЛИЯ:</label>
+                <input type="text" name="surname" id="surname" placeholder="Введите вашу фамилию*" required>
+              </li>
+              <li class="journey__field-item">
+                <label for="name">ИМЯ:</label>
+                <input type="text" name="name" id="name" placeholder="Введите ваше имя*">
+              </li>
+              <li class="journey__field-item">
+                <label for="fathers-name">ОТЧЕСТВО:</label>
+                <input type="text" name="fathers-name" id="fathers-name" placeholder="Ну и отчество тоже" required>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="container journey__achievements">
+          <fieldset class="journey__fieldset">
+            <legend class="journey__legend">Ваши безбашенные
+              достижения в путешествии</legend>
+            <ul class="journey__checkbox-list">
+              <li class="journey__checkbox-item">
+                <input type="checkbox" name="selfie" id="selfie" checked>
+                <label for="selfie">Сделал селфи с акулой</label>
+              </li>
+              <li class="journey__checkbox-item">
+                <input type="checkbox" name="burned" id="burned" checked>
+                <label for="burned">Обгорел на пляже</label>
+              </li>
+              <li class="journey__checkbox-item">
+                <input type="checkbox" name="chuck" id="chuck">
+                <label for="chuck">Видел Чака Норриса</label>
+              </li>
+              <li class="journey__checkbox-item">
+                <input type="checkbox" name="souvenir" id="souvenir">
+                <label for="souvenir">Накупил сувениров</label>
+              </li>
+              <li class="journey__checkbox-item">
+                <input type="checkbox" name="tower" id="tower" checked>
+                <label for="tower">Удержал башню</label>
+              </li>
+              <li class="journey__checkbox-item">
+                <input type="checkbox" name="hotel" id="hotel">
+                <label for="hotel">Разгромил отель</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="container journey__contacts">
+          <fieldset class="journey__fieldset">
+            <legend class="journey__legend">С каким приложением путешествовали?</legend>
+            <ul class="journey__field-list journey__field-list--contacts">
+              <li class="journey__field-item journey__field-item--contacts">
+                <label for="phone-number">НОМЕР ТЕЛЕФОНА</label>
+                <input type="tel" name="phone-number" id="phone-number" placeholder="Номер, пожалуйста">
+              </li>
+              <li class="journey__field-item journey__field-item--contacts">
+                <label for="email-address">АДРЕС ПОЧТЫ</label>
+                <input type="email" name="email" id="email-address" placeholder="Введите почту *" required>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="container journey__app">
+          <fieldset class="journey__fieldset">
+            <legend class="journey__legend">С каким приложением
+              путешествовали?</legend>
+            <ul class="journey__radio-list">
+              <li class="journey__radio-item">
+                <input type="radio" name="software" id="for-ios" value="ios">
+                <label for="for-ios">Pink для iOS</label>
+              </li>
+              <li class="journey__radio-item">
+                <input type="radio" name="software" id="for-android" value="android">
+                <label for="for-android">Pink на Android</label>
+              </li>
+              <li class="journey__radio-item">
+                <input type="radio" name="software" id="for-windows" value="windows">
+                <label for="for-windows">Windows Phone</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="container journey__emotions">
+          <fieldset class="journey__fieldset">
+            <legend class="journey__legend journey__legend-textarea">ОПИШИТЕ СВОИ ЭМОЦИИ</legend>
+            <label for="emotions">
+              <textarea name="feedback" id="emotions" cols="30"
+                rows="10">Можно прям в красках, не стесняясь в выражениях</textarea>
+            </label>
+          </fieldset>
+        </div>
+        <div class="journey__button-wrapper container">
+          <button class="button journey__submit-button" type="submit">
+            Отправить форму
+          </button>
+          <p class="journey__note">
+            <span class="color-red">*</span> — обязательные поля
+          </p>
+        </div>
       </form>
     </div>
   </section>
 </main>
 <footer class="footer">
-  <div class="footer__wrapper">
-    <a class="footer__logo" href="#">
-      <img src="img/logos/pink-footer-logo.svg" alt="Логотип и надпись Pink">
-    </a>
+  <div class="footer__wrapper container">
+    <p class="footer__logo">
+      <a class="footer__logo-link" href="#">
+        <img src="img/logos/pink-footer-logo.svg" alt="Логотип и надпись Pink">
+      </a>
+    </p>
     <ul class="footer__social-list">
       <li class="footer__social-item">
         <a class="footer__social-link" href="#">
@@ -195,7 +211,7 @@
 <section class="modal journey__modal">
   <div class="journey__modal-wrapper">
     <h3 class="journey__modal-headline">Ваша заявка отправлена</h3>
-    <p class="journey__modal-text journey__modal-text">Спасибо за ваше участие, ваша заявка
+    <p class="journey__modal-text journey__modal-text--compact">Спасибо за ваше участие, ваша заявка
       уже поступила к нам. В ближайшее
       время мы рассмотрим ее и
       оповестим вас.</p>
