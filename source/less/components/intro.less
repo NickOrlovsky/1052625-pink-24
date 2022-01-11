@@ -2,31 +2,57 @@
   color: @basic-white;
   background-color: @bg-dark-blue;
   background-image: url("../img/backgrounds/back-mobile.jpg");
+  background-position: 50% 0;
+  background-size: cover;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/backgrounds/back-tablet.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/backgrounds/back-desktop.jpg");
+  }
 }
 
 .intro__wrapper {
   box-sizing: border-box;
+  padding-top: 95px;
+  padding-bottom: 38px;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 212px;
+    padding-bottom: 119px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 224px;
+    padding-bottom: 130px;
+  }
+}
+
+.intro__inner-wrapper {
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    max-width: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
   }
 }
 
 .intro__header {
-  padding-top: 95px;
   padding-bottom: 310px;
 
-  background: url("../img/backgrounds/phone-bg.png") no-repeat 50% 100%;
-
   @media (min-width: @tablet-width) {
-    padding-top: 102px;
+    padding-bottom: 39px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 114px;
+    padding-bottom: 51px;
   }
 }
 
@@ -37,6 +63,16 @@
   font-weight: 300;
   line-height: 28.8px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 
 .intro__slogan-wrapper {
@@ -50,16 +86,6 @@
 
 .intro__download-wrapper {
   padding-top: 28px;
-
-  padding-bottom: 38px;
-
-  @media (min-width: @tablet-width) {
-    padding-bottom: 119px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-bottom: 130px;
-  }
 }
 
 .intro__download-button {
@@ -91,7 +117,7 @@
 
 .intro__logo-list {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 
   margin: 0;
@@ -101,8 +127,13 @@
   list-style: none;
 }
 
-// .intro__logo-list-item {
-// }
+.intro__logo-list-item {
+  margin-right: 35px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
 
 // .intro__download-link {
 // }
@@ -113,4 +144,8 @@
   font-weight: 300;
   line-height: 24px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
 }

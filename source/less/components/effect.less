@@ -3,6 +3,14 @@
 
   @media (min-width: @tablet-width) {
     display: block;
+
+    background-color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+
+    background-color: @background-gray;
   }
 }
 
@@ -11,17 +19,25 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: 54px 0 54px;
+  padding-top: 54px;
+  padding-bottom: 10px;
   box-sizing: border-box;
 
   @media (min-width: @desktop-width) {
-    padding: 17px 0 67px 0;
+    padding-top: 17px;
+    padding-bottom: 67px;
   }
 }
 
 .effect__time-logo {
+  display: block;
+
   width: 238px;
   height: 276px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 72px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 298px;
