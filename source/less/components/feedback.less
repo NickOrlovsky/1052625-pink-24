@@ -2,6 +2,8 @@
 // }
 
 .feedback__wrapper {
+  position: relative;
+
   padding-top: 50px;
   padding-bottom: 60px;
   box-sizing: border-box;
@@ -78,6 +80,11 @@
 
     font-size: 18px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 104px;
+  }
+
 }
 
 .feedback__buttons {
@@ -85,5 +92,13 @@
 
   @media (min-width: @desktop-width) {
     display: none;
+  }
+}
+
+.feedback__slider-buttons {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }

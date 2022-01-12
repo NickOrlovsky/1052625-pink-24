@@ -116,6 +116,18 @@
   }
 }
 
+.advantages__img-inner-wrapper {
+  @media (min-width: @desktop-width) {
+    position: relative;
+
+    min-width: 186px;
+    min-height: 300px;
+    margin: 0;
+
+    overflow: hidden;
+  }
+}
+
 .advantages__img-wrapper {
   margin: 0;
 
@@ -141,8 +153,22 @@
     margin-bottom: 50px;
     min-width: 186px;
     min-height: 300px;
-    overflow: hidden;
+    overflow: visible;
   }
+}
+
+.advantages__shadow {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -57px;
+
+  width: 300px;
+  height: 17px;
+  margin: 0;
+
+  background: url("../img/decor/shadow.png") no-repeat;
+  background-position: 0 0;
 }
 
 .advantages__img {

@@ -10,12 +10,12 @@
 </head>
 
 <body class="page__body">
-  <header class="header">
+  <header class="header header--opened">
     <div class="header__wrapper container">
         <a class="header__logo" href="#">
           <img src="img/logos/pink-header-logo.svg" alt="Логотип Pink" width="74" height="23">
         </a>
-        <nav class="main-nav main-nav--closed main-nav--nojs">
+        <nav class="main-nav main-nav--opened main-nav--nojs">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -95,26 +95,36 @@
             <li class="advantages__list-item">
               <h3 class="advantages__title">Поднимает настроение</h3>
               <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
-                несколько кликов!</p>
-              <p class="advantages__img-wrapper">
-                <img class="advantages__img" src="img/content/screen-gray.png" alt="Серый экран">
+                несколько кликов!
               </p>
+              <div class="advantages__img-wrapper">
+                <p class="advantages__shadow"></p>
+                <p class="advantages__img-inner-wrapper">
+                  <img class="advantages__img" src="img/content/screen-gray.png" alt="Серый экран">
+                </p>
+              </div>
             </li>
             <li class="advantages__list-item">
               <h3 class="advantages__title">Меняет мир вокруг</h3>
               <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
                 усилить эффект</p>
-              <p class="advantages__img-wrapper">
-                <img class="advantages__img" src="img/content/screen-pink.png" alt="Розовый экран">
-              </p>
+              <div class="advantages__img-wrapper">
+                <p class="advantages__shadow"></p>
+                <p class="advantages__img-inner-wrapper">
+                  <img class="advantages__img" src="img/content/screen-pink.png" alt="Розовый экран">
+                </p>
+              </div>
             </li>
             <li class="advantages__list-item">
               <h3 class="advantages__title">Заводит новых друзей</h3>
               <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите
                 новых</p>
-              <p class="advantages__img-wrapper advantages__img-wrapper--visible">
-                <img class="advantages__img advantages__img--visible" src="img/content/screen-smile.png" alt="Розовый экран со смайликом">
-              </p>
+                <div class="advantages__img-wrapper advantages__img-wrapper--visible">
+                  <p class="advantages__shadow"></p>
+                  <p class="advantages__img-inner-wrapper">
+                    <img class="advantages__img advantages__img--visible" src="img/content/screen-smile.png" alt="Розовый экран со смайликом">
+                  </p>
+                </div>
             </li>
           </ul>
         </div>
@@ -155,6 +165,18 @@
           <button class="slider__button slider__button--current" type="button"><span class="visually-hidden">1</span></button>
           <button class="slider__button" type="button"><span class="visually-hidden">2</span></button>
           <button class="slider__button" type="button"><span class="visually-hidden">3</span></button>
+        </p>
+        <p class="feedback__slider-buttons">
+          <button class="slider__button-scroll slider__button-scroll--left" type="button">
+            <svg width="22" height="41" viewBox="0 0 22 41" fill="" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.3" d="M2.0413 20.5035L21.7483 1.4144C21.8281 1.3379 21.8914 1.24683 21.9346 1.14646C21.9778 1.04608 22 0.938398 22 0.829635C22 0.720871 21.9778 0.613187 21.9346 0.512814C21.8914 0.41244 21.8281 0.321369 21.7483 0.24487C21.6686 0.167255 21.5738 0.105671 21.4694 0.0636507C21.365 0.0216304 21.2532 0 21.1401 0C21.0271 0 20.9153 0.0216304 20.8109 0.0636507C20.7065 0.105671 20.6117 0.167255 20.532 0.24487L0.252535 19.9088C0.17249 19.9862 0.108978 20.0781 0.0656429 20.1793C0.0223074 20.2805 0 20.389 0 20.4985C0 20.6081 0.0223074 20.7166 0.0656429 20.8178C0.108978 20.919 0.17249 21.0109 0.252535 21.0883L20.532 40.7621C20.6967 40.9157 20.9167 41.001 21.1453 41C21.3139 40.9985 21.4783 40.9488 21.6181 40.8572C21.7578 40.7656 21.8666 40.6362 21.9309 40.485C21.9952 40.3339 22.0122 40.1677 21.9797 40.0072C21.9473 39.8467 21.8668 39.6991 21.7483 39.5827L2.0413 20.5035Z" fill="#"/>
+            </svg>
+          </button>
+          <button class="slider__button-scroll slider__button-scroll--right" type="button">
+            <svg width="22" height="41" viewBox="0 0 22 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.3" d="M2.0413 20.5035L21.7483 1.4144C21.8281 1.3379 21.8914 1.24683 21.9346 1.14646C21.9778 1.04608 22 0.938398 22 0.829635C22 0.720871 21.9778 0.613187 21.9346 0.512814C21.8914 0.41244 21.8281 0.321369 21.7483 0.24487C21.6686 0.167255 21.5738 0.105671 21.4694 0.0636507C21.365 0.0216304 21.2532 0 21.1401 0C21.0271 0 20.9153 0.0216304 20.8109 0.0636507C20.7065 0.105671 20.6117 0.167255 20.532 0.24487L0.252535 19.9088C0.17249 19.9862 0.108978 20.0781 0.0656429 20.1793C0.0223074 20.2805 0 20.389 0 20.4985C0 20.6081 0.0223074 20.7166 0.0656429 20.8178C0.108978 20.919 0.17249 21.0109 0.252535 21.0883L20.532 40.7621C20.6967 40.9157 20.9167 41.001 21.1453 41C21.3139 40.9985 21.4783 40.9488 21.6181 40.8572C21.7578 40.7656 21.8666 40.6362 21.9309 40.485C21.9952 40.3339 22.0122 40.1677 21.9797 40.0072C21.9473 39.8467 21.8668 39.6991 21.7483 39.5827L2.0413 20.5035Z" fill="#"/>
+            </svg>
+          </button>
         </p>
       </div>
     </section>
@@ -290,7 +312,7 @@
         <span>Разработано</span>
         <a class="footer__copyright-link" href="https://htmlacademy.ru">
           <svg width="27" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
-            <path fill="#none"
+            <path fill="#"
               d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
           </svg>
         </a>
