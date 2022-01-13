@@ -1,9 +1,9 @@
 .main-nav {
-  // display: none;
-  // background-color: @basic-font;
   width: auto;
 
   background-color: transparent;
+
+  z-index: 10;
 
   @media (min-width: @desktop-width) {
     background-color: transparent;
@@ -130,12 +130,6 @@
     display: none;
   }
 }
-
-
-// .main-nav__toggle-wrap {
-//   position: relative;
-//   width: auto;
-// }
 
 .main-nav--closed .main-nav__toggle::before {
   content: "";
