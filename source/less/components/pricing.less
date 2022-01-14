@@ -1,5 +1,13 @@
 .pricing {
-  background-color: @background-gray;
+  background: linear-gradient(-3deg, #f2f2f2 92%, #ffffff 50%);
+
+  @media (min-width: @tablet-width) {
+    background: linear-gradient(-2deg, #f2f2f2 90%, #ffffff 50%);
+  }
+
+  @media (min-width: @desktop-width) {
+    background: linear-gradient(-2deg, #f2f2f2 86%, #ffffff 50%);
+  }
 }
 
 .pricing__wrapper {
