@@ -32,3 +32,36 @@
     background-color: @basic-white;
   }
 }
+
+.slider__button-scroll {
+  position: absolute;
+  top: 50%;
+
+  padding: 10px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  & svg {
+    fill: fade(@basic-font, 30%);
+  }
+
+  &:hover svg {
+    fill: fade(@basic-font, 60%);
+  }
+
+  &:active svg {
+    fill: fade(@basic-font, 10%);
+  }
+}
+
+.slider__button-scroll--left {
+  left: -10px;
+}
+
+.slider__button-scroll--right {
+  right: -10px;
+
+  transform: rotate(180deg);
+}

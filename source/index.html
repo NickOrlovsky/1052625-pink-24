@@ -10,67 +10,71 @@
 </head>
 
 <body class="page__body">
-  <header class="header">
+  <header class="header header--opened">
     <div class="header__wrapper container">
         <a class="header__logo" href="#">
           <img src="img/logos/pink-header-logo.svg" alt="Логотип Pink" width="74" height="23">
         </a>
-        <button class="header__nav-toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__list-item main-nav__list-item--active">
+                <a href="#">Главная</a>
+              </li>
+              <li class="main-nav__list-item">
+                <a href="#">Фотографии</a>
+              </li>
+              <li class="main-nav__list-item">
+                <a href="#">Конкурс</a>
+              </li>
+              <li class="main-nav__list-item">
+                <a href="#">HTML Academy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
     </div>
-    <nav class="main-nav">
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class=main-nav__list-item>
-            <a href="#">Главная</a>
-          </li>
-          <li class=main-nav__list-item>
-            <a href="#">Фотографии</a>
-          </li>
-          <li class=main-nav__list-item>
-            <a href="#">Конкурс</a>
-          </li>
-          <li class="main-nav__list-item">
-            <a href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
   </header>
   <main class="page__main">
     <h1 class="visually-hidden"> Pink - наше приложение</h1>
     <section class="intro">
       <div class="intro__wrapper container">
         <h2 class="visually-hidden">Скачать приложение</h2>
-        <div class="intro__header">
-          <p class="intro__slogan">Взгляните на жизнь
-            иначе!</p>
-        </div>
-        <div class="intro__download-wrapper">
-          <a class="intro__download-button" href="#">
-            Скачать приложение
-          </a>
-          <ul class="intro__logo-list">
-            <li class="intro__logo-list-item">
-              <a class="intro__download-link" href="#">
-                <img src="img/logos/apple-logo.png" alt="Логотип Apple" width="47" height="56">
-              </a>
-            </li>
-            <li class="intro__logo-list-item">
-              <a class="intro__download-link" href="#">
-                <img src="img/logos/android-logo.png" alt="Логотип Android" width="43" height="47">
-              </a>
-            </li>
-            <li class="intro__logo-list-item">
-              <a class="intro__download-link" href="#">
-                <img src="img/logos/microsoft-logo.png" alt="Логотип Windows" width="44" height="41">
-              </a>
-            </li>
-          </ul>
-          <p class="intro__legend">
-            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-          </p>
+        <div class="intro__inner-wrapper">
+          <div class="intro__header">
+            <p class="intro__slogan">Взгляните на жизнь
+              иначе!</p>
+            <div class="intro__screen">
+            </div>
+          </div>
+          <div class="intro__download-wrapper">
+            <a class="intro__download-button" href="#">
+              Скачать приложение
+            </a>
+            <ul class="intro__logo-list">
+              <li class="intro__logo-list-item">
+                <a class="intro__download-link" href="#">
+                  <img src="img/logos/apple-logo.png" alt="Логотип Apple" width="47" height="56">
+                </a>
+              </li>
+              <li class="intro__logo-list-item">
+                <a class="intro__download-link" href="#">
+                  <img src="img/logos/android-logo.png" alt="Логотип Android" width="43" height="47">
+                </a>
+              </li>
+              <li class="intro__logo-list-item">
+                <a class="intro__download-link" href="#">
+                  <img src="img/logos/microsoft-logo.png" alt="Логотип Windows" width="44" height="41">
+                </a>
+              </li>
+            </ul>
+            <p class="intro__legend">
+              Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -79,38 +83,55 @@
         <p class="main-slogan__text">
           Устали от серости мегаполиса?
           <br>
+          <br>
           Нам есть, что вам
           предложить!
         </p>
       </div>
     </div>
     <section class="advantages">
-      <div class="advantages__wrapper container">
+      <div class="advantages__wrapper">
         <h2 class="visually-hidden">Наши предложения</h2>
-        <div class="advantages__list-wrapper">
+        <div class="advantages__list-wrapper container">
           <ul class="advantages__list">
             <li class="advantages__list-item">
               <h3 class="advantages__title">Поднимает настроение</h3>
               <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
-                несколько кликов!</p>
-              <img class="advantages__img" src="img/content/screen-gray.png" alt="Серый экран">
+                несколько кликов!
+              </p>
+              <div class="advantages__img-wrapper">
+                <p class="advantages__shadow"></p>
+                <p class="advantages__img-inner-wrapper">
+                  <img class="advantages__img" src="img/content/screen-gray.png" alt="Серый экран">
+                </p>
+              </div>
             </li>
             <li class="advantages__list-item">
               <h3 class="advantages__title">Меняет мир вокруг</h3>
               <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
                 усилить эффект</p>
-              <img class="advantages__img" src="img/content/screen-pink.png" alt="Розовый экран">
+              <div class="advantages__img-wrapper">
+                <p class="advantages__shadow"></p>
+                <p class="advantages__img-inner-wrapper">
+                  <img class="advantages__img" src="img/content/screen-pink.png" alt="Розовый экран">
+                </p>
+              </div>
             </li>
             <li class="advantages__list-item">
               <h3 class="advantages__title">Заводит новых друзей</h3>
               <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите
                 новых</p>
-              <img class="advantages__img advantages__img--visible" src="img/content/screen-smile.png" alt="Розовый экран со смайликом">
+                <div class="advantages__img-wrapper advantages__img-wrapper--visible">
+                  <p class="advantages__shadow"></p>
+                  <p class="advantages__img-inner-wrapper">
+                    <img class="advantages__img advantages__img--visible" src="img/content/screen-smile.png" alt="Розовый экран со смайликом">
+                  </p>
+                </div>
             </li>
           </ul>
         </div>
         <div class="effect">
-          <div class="effect__wrapper">
+          <div class="effect__wrapper container">
             <img class="effect__time-logo" src="img/graphics/timer.svg" alt="Таймер" width="238" height="276">
           <div class="effect__text-wrapper">
             <h3 class="effect__headline">Эффект
@@ -129,6 +150,7 @@
         <h2 class="visually-hidden">Отзывы о нас</h2>
         <ul class="feedback__list slider-list">
           <li class="feedback__list-item feedback__list-item--current slider-list__item">
+            <img class="feedback__qoutes-img" src="img/graphics/quotes.svg" alt="кавычки" width="79" height="63">
             <b class="feedback__title">Николай Петров<br>
               <span class="feedback__title-job">25 лет, водитель трамвая</span>
             </b>
@@ -146,6 +168,18 @@
           <button class="slider__button" type="button"><span class="visually-hidden">2</span></button>
           <button class="slider__button" type="button"><span class="visually-hidden">3</span></button>
         </p>
+        <p class="feedback__slider-buttons">
+          <button class="slider__button-scroll slider__button-scroll--left" type="button">
+            <svg width="22" height="41" viewBox="0 0 22 41" fill="" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.3" d="M2.0413 20.5035L21.7483 1.4144C21.8281 1.3379 21.8914 1.24683 21.9346 1.14646C21.9778 1.04608 22 0.938398 22 0.829635C22 0.720871 21.9778 0.613187 21.9346 0.512814C21.8914 0.41244 21.8281 0.321369 21.7483 0.24487C21.6686 0.167255 21.5738 0.105671 21.4694 0.0636507C21.365 0.0216304 21.2532 0 21.1401 0C21.0271 0 20.9153 0.0216304 20.8109 0.0636507C20.7065 0.105671 20.6117 0.167255 20.532 0.24487L0.252535 19.9088C0.17249 19.9862 0.108978 20.0781 0.0656429 20.1793C0.0223074 20.2805 0 20.389 0 20.4985C0 20.6081 0.0223074 20.7166 0.0656429 20.8178C0.108978 20.919 0.17249 21.0109 0.252535 21.0883L20.532 40.7621C20.6967 40.9157 20.9167 41.001 21.1453 41C21.3139 40.9985 21.4783 40.9488 21.6181 40.8572C21.7578 40.7656 21.8666 40.6362 21.9309 40.485C21.9952 40.3339 22.0122 40.1677 21.9797 40.0072C21.9473 39.8467 21.8668 39.6991 21.7483 39.5827L2.0413 20.5035Z" fill="#"/>
+            </svg>
+          </button>
+          <button class="slider__button-scroll slider__button-scroll--right" type="button">
+            <svg width="22" height="41" viewBox="0 0 22 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.3" d="M2.0413 20.5035L21.7483 1.4144C21.8281 1.3379 21.8914 1.24683 21.9346 1.14646C21.9778 1.04608 22 0.938398 22 0.829635C22 0.720871 21.9778 0.613187 21.9346 0.512814C21.8914 0.41244 21.8281 0.321369 21.7483 0.24487C21.6686 0.167255 21.5738 0.105671 21.4694 0.0636507C21.365 0.0216304 21.2532 0 21.1401 0C21.0271 0 20.9153 0.0216304 20.8109 0.0636507C20.7065 0.105671 20.6117 0.167255 20.532 0.24487L0.252535 19.9088C0.17249 19.9862 0.108978 20.0781 0.0656429 20.1793C0.0223074 20.2805 0 20.389 0 20.4985C0 20.6081 0.0223074 20.7166 0.0656429 20.8178C0.108978 20.919 0.17249 21.0109 0.252535 21.0883L20.532 40.7621C20.6967 40.9157 20.9167 41.001 21.1453 41C21.3139 40.9985 21.4783 40.9488 21.6181 40.8572C21.7578 40.7656 21.8666 40.6362 21.9309 40.485C21.9952 40.3339 22.0122 40.1677 21.9797 40.0072C21.9473 39.8467 21.8668 39.6991 21.7483 39.5827L2.0413 20.5035Z" fill="#"/>
+            </svg>
+          </button>
+        </p>
       </div>
     </section>
     <section class="pricing">
@@ -153,37 +187,64 @@
         <h2 class="visually-hidden">Наши цены</h2>
         <ul class="pricing__list slider-list">
           <li class="pricing__list-item pricing__side-legend slider-list__item">
-            <p>Розовый фильтр</p>
-            <p>Смайлики</p>
-            <p>Комментарии</p>
+            <p class="pricing__cell pricing__cell--legend">Розовый фильтр</p>
+            <p class="pricing__cell pricing__cell--legend">Смайлики</p>
+            <p class="pricing__cell pricing__cell--legend">Комментарии</p>
           </li>
           <li class="pricing__list-item slider-list__item">
             <div class="pricing__headline">
               <h3>База</h3>
               <p>1,99 USD</p>
-              <p class="pricing__label-hit">Хит</p>
             </div>
-            <p>Розовый фильтр</p>
-            <p>Смайлики</p>
-            <p>Комментарии</p>
+            <p class="pricing__cell">
+              <span class="pricing__cell-text">Розовый фильтр</span>
+              <img class="pricing__img" src="img/graphics/pricing-check.svg" alt="Галочка">
+            </p>
+            <p class="pricing__cell">
+              <span class="pricing__cell-text">Смайлики</span>
+              <img class="pricing__img" src="img/graphics/pricing-cross.svg" alt="Крестик">
+            </p>
+            <p class="pricing__cell">
+              <span class="pricing__cell-text">Комментарии</span>
+              <img class="pricing__img" src="img/graphics/pricing-cross.svg" alt="Крестик">
+            </p>
           </li>
           <li class="pricing__list-item pricing__list-item--current slider-list__item">
             <div class="pricing__headline">
               <h3>СТАНДАРТ</h3>
               <p>3,99 USD</p>
+              <p class="pricing__label-hit">Хит</p>
             </div>
-            <p>Розовый фильтр</p>
-            <p>Смайлики</p>
-            <p>Комментарии</p>
+            <p class="pricing__cell">
+              <span class="pricing__cell-text">Розовый фильтр</span>
+              <img class="pricing__img" src="img/graphics/pricing-check.svg" alt="Галочка">
+            </p>
+            <p class="pricing__cell">
+              <span class="pricing__cell-text">Смайлики</span>
+              <img class="pricing__img" src="img/graphics/pricing-check.svg" alt="Галочка">
+            </p>
+            <p class="pricing__cell">
+              <span class="pricing__cell-text">Комментарии</span>
+              <img class="pricing__img" src="img/graphics/pricing-cross.svg" alt="Крестик">
+            </p>
           </li>
           <li class="pricing__list-item slider-list__item">
             <div class="pricing__headline">
               <h3>АНЛИМ</h3>
               <p>9,99 USD</p>
             </div>
-            <p>Розовый фильтр</p>
-            <p>Смайлики</p>
-            <p>Комментарии</p>
+            <p class="pricing__cell">
+              <span class="pricing__cell-text">Розовый фильтр</span>
+              <img class="pricing__img" src="img/graphics/pricing-check.svg" alt="Галочка">
+            </p>
+            <p class="pricing__cell">
+              <span class="pricing__cell-text">Смайлики</span>
+              <img class="pricing__img" src="img/graphics/pricing-check.svg" alt="Галочка">
+            </p>
+            <p class="pricing__cell">
+              <span class="pricing__cell-text">Комментарии</span>
+              <img class="pricing__img" src="img/graphics/pricing-check.svg" alt="Галочка">
+            </p>
           </li>
         </ul>
         <p class="pricing__buttons slider__buttons">
@@ -200,15 +261,15 @@
           Остались вопросы? Свяжитесь с нами!
         </p>
         <ul class="contacts__list">
-          <li class="contacts__list-item">
+          <li class="contacts__list-item contacts__list-item--phone">
             <h3>Звоните:</h3>
             <a href="tel:+78125556666">+7 (812) 555-66-66</a>
           </li>
-          <li class="contacts__list-item">
+          <li class="contacts__list-item contacts__list-item--email">
             <h3>Пишите:</h3>
             <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </li>
-          <li class="contacts__list-item">
+          <li class="contacts__list-item contacts__list-item--address">
             <h3>Приезжайте в гости:</h3>
             <a href="#">ул. Большая
               Конюшенная, 19/8</a>
@@ -217,10 +278,12 @@
       </div>
       <section class="map">
         <h2 class="visually-hidden">Как нас найти?</h2>
-        <p class="map__wrapper">
-          <img class="map__img" src="img/map/map.jpg" alt="Карта указывающая адресс ул. Большая
-          Конюшенная, 19/8" width="1200" height="502">
-        </p>
+        <div class="map__wrapper">
+          <div class="map__decoration"></div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sua!4v1641756441144!5m2!1sen!2sua" width="1200" height="502" style="border: 0;" title="ул. Большая Конюшенная, 19/8" allowfullscreen="" loading="lazy"></iframe>
+          <!-- <img class="map__img" src="img/map/map.jpg" alt="Карта указывающая адресс ул. Большая
+          Конюшенная, 19/8" width="1200" height="502"> -->
+        </div>
       </section>
     </section>
   </main>
@@ -249,10 +312,10 @@
         </li>
       </ul>
       <p class="footer__copyright">
-        Разработано
+        <span>Разработано</span>
         <a class="footer__copyright-link" href="https://htmlacademy.ru">
           <svg width="27" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
-            <path fill="#2E368F"
+            <path fill="#"
               d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
           </svg>
         </a>
