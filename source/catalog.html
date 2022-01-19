@@ -11,33 +11,33 @@
 </head>
 
 <body class="page__body">
-  <header class="header">
+  <header class="header header--opened">
     <div class="header__wrapper container">
         <a class="header__logo" href="#">
           <img src="img/logos/pink-header-logo.svg" alt="Логотип Pink" width="74" height="23">
         </a>
-        <button class="header__nav-toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__list-item main-nav__list-item--active">
+                <a href="#">Главная</a>
+              </li>
+              <li class="main-nav__list-item">
+                <a href="#">Фотографии</a>
+              </li>
+              <li class="main-nav__list-item">
+                <a href="#">Конкурс</a>
+              </li>
+              <li class="main-nav__list-item">
+                <a href="#">HTML Academy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
     </div>
-    <nav class="main-nav">
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class=main-nav__list-item>
-            <a href="#">Главная</a>
-          </li>
-          <li class=main-nav__list-item>
-            <a href="#">Фотографии</a>
-          </li>
-          <li class=main-nav__list-item>
-            <a href="#">Конкурс</a>
-          </li>
-          <li class="main-nav__list-item">
-            <a href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
   </header>
   <main class="page__main">
     <h1 class="visually-hidden">Каталог фотографий наших пользователей</h1>
@@ -51,7 +51,7 @@
     <section class="catalog">
       <h2 class="visually-hidden">Фотографии от пользователей с комментариями</h2>
       <div class="catalog__wrapper">
-        <p class="catalog__text">
+        <p class="catalog__text container">
           Взгляните на фотографии, которые выкладывают пользователи!
           Видите, как не хватает ваших?
         </p>
@@ -84,11 +84,13 @@
           <ul class="catalog__list">
             <li class="catalog__list-item">
               <p class="catalog__image">
-                <img src="img/catalog/white-car.jpg" alt="Фото белой машины" width="280" height="180">
+                <img src="img/catalog/white-car.jpg" alt="Фото белой машины" width="300" height="400">
               </p>
               <div class="catalog__inner-wrapper">
-                <b class="catalog__name">Левон <span class="catalog__time">(5 часов назад)</span></b>
-                <p class="catalog__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                <div class="catalog__content-wrapper">
+                  <b class="catalog__name">Левон <span class="catalog__time">(5 часов назад)</span></b>
+                  <p class="catalog__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                </div>
                 <div class="catalog__like-wrapper">
                   <button class="catalog__like-icon" type="button">
                     <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,8 +108,10 @@
                 <img src="img/catalog/drum.jpg" alt="Фото моста" width="280" height="180">
               </p>
               <div class="catalog__inner-wrapper">
-                <b class="catalog__name">Антон <span class="catalog__time">(12 часов назад)</span></b>
-                <p class="catalog__comment">Соседи будут рады!</p>
+                <div class="catalog__content-wrapper">
+                  <b class="catalog__name">Антон <span class="catalog__time">(12 часов назад)</span></b>
+                  <p class="catalog__comment">Соседи будут рады!</p>
+                </div>
                 <div class="catalog__like-wrapper">
                   <button class="catalog__like-icon" type="button">
                     <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,8 +129,10 @@
                 <img src="img/catalog/roof.jpg" alt="Фото крыши" width="280" height="180">
               </p>
               <div class="catalog__inner-wrapper">
-                <b class="catalog__name">Борис <span class="catalog__time">(20 часов назад)</span></b>
-                <p class="catalog__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                <div class="catalog__content-wrapper">
+                  <b class="catalog__name">Борис <span class="catalog__time">(20 часов назад)</span></b>
+                  <p class="catalog__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                </div>
                 <div class="catalog__like-wrapper">
                   <button class="catalog__like-icon" type="button">
                     <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,7 +141,7 @@
                         fill="#D22856" />
                     </svg>
                   </button>
-                  <p class="catalot__like-text">Нравится: 215</p>
+                  <p class="catalog__like-text">Нравится: 215</p>
                 </div>
               </div>
             </li>
@@ -144,8 +150,10 @@
                 <img src="img/catalog/bahcha.jpg" alt="Фото кубанская бахча" width="280" height="180">
               </p>
               <div class="catalog__inner-wrapper">
-                <b class="catalog__name">Сергей <span class="catalog__time">(25 часов назад)</span></b>
-                <p class="catalog__comment">Самая кубанская в мире!</p>
+                <div class="catalog__content-wrapper">
+                  <b class="catalog__name">Сергей <span class="catalog__time">(25 часов назад)</span></b>
+                  <p class="catalog__comment">Самая кубанская в мире!</p>
+                </div>
                 <div class="catalog__like-wrapper">
                   <button class="catalog__like-icon" type="button">
                     <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -154,7 +162,7 @@
                         fill="#D22856" />
                     </svg>
                   </button>
-                  <p class="catalot__like-text">Нравится: 4</p>
+                  <p class="catalog__like-text">Нравится: 4</p>
                 </div>
               </div>
             </li>
@@ -163,8 +171,10 @@
                 <img src="img/catalog/mountains.jpg" alt="Фото гор" width="280" height="180">
               </p>
               <div class="catalog__inner-wrapper">
-                <b class="catalog__name">Максим <span class="catalog__time">(40 часов назад)</span></b>
-                <p class="catalog__comment">Где снег-то?</p>
+                <div class="catalog__content-wrapper">
+                  <b class="catalog__name">Максим <span class="catalog__time">(40 часов назад)</span></b>
+                  <p class="catalog__comment">Где снег-то?</p>
+                </div>
                 <div class="catalog__like-wrapper">
                   <button class="catalog__like-icon" type="button">
                     <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -182,8 +192,10 @@
                 <img src="img/catalog/plane.jpg" alt="Фото крыла самолета" width="280" height="180">
               </p>
               <div class="catalog__inner-wrapper">
-                <b class="catalog__name">Надежда <span class="catalog__time">(45 часов назад)</span></b>
-                <p class="catalog__comment">Всем GM и взаимные лайки!</p>
+                <div class="catalog__content-wrapper">
+                  <b class="catalog__name">Надежда <span class="catalog__time">(45 часов назад)</span></b>
+                  <p class="catalog__comment">Всем GM и взаимные лайки!</p>
+                </div>
                 <div class="catalog__like-wrapper">
                   <button class="catalog__like-icon" type="button">
                     <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -198,7 +210,7 @@
             </li>
           </ul>
         </div>
-        <p class="catalog__text">
+        <p class="catalog__text container">
           Затмите их всех!
           Выкладывайте все, что накопилось в телефоне!
         </p>
@@ -211,24 +223,24 @@
           <img src="img/editor/winter-road.jpg" alt="Заснеженная дорога" wight="280" height="374">
         </p>
         <ul class="editor__list">
-          <li class="editor__list-item editor__list-item--active">
-            <button class="editor__tools-btn editor__tools-btn--crop" type="button">
-              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M32 28H36V12C36 10.9391 35.5786 9.92172 34.8284 9.17157C34.0783 8.42143 33.0609 8 32 8H16V12H32V28ZM12 32V0H8V8H0V12H8V32C8 33.0609 8.42143 34.0783 9.17157 34.8284C9.92172 35.5786 10.9391 36 12 36H32V44H36V36H44V32H12Z" fill="#D22856"/>
+          <li class="editor__list-item">
+            <button class="editor__tools-btn" type="button">
+              <svg width="44" height="44" viewBox="0 0 44 44" fill="#" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32 28H36V12C36 10.9391 35.5786 9.92172 34.8284 9.17157C34.0783 8.42143 33.0609 8 32 8H16V12H32V28ZM12 32V0H8V8H0V12H8V32C8 33.0609 8.42143 34.0783 9.17157 34.8284C9.92172 35.5786 10.9391 36 12 36H32V44H36V36H44V32H12Z" fill="#"/>
                 </svg>
             </button>
-            <div class="editor__range-wrapper editor__range-wrapper--active">
+            <div class="editor__range-wrapper">
               <input class="range" type="range" min="1" max="100">
             </div>
           </li>
           <li class="editor__list-item">
-            <button class="editor__tools-btn editor__tools-btn--fill" type="button">
-              <svg width="48" height="43" viewBox="0 0 48 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g opacity="0.3">
+            <button class="editor__tools-btn" type="button">
+              <svg width="48" height="43" viewBox="0 0 48 43" fill="#" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="#">
                   <path
                     d="M33.12 17.88L15.24 0L12.41 2.83L17.17 7.59L6.88 17.88C6.3182 18.4425 6.00264 19.205 6.00264 20C6.00264 20.795 6.3182 21.5575 6.88 22.12L17.88 33.12C18.4425 33.6818 19.205 33.9974 20 33.9974C20.795 33.9974 21.5575 33.6818 22.12 33.12L33.12 22.12C33.6818 21.5575 33.9974 20.795 33.9974 20C33.9974 19.205 33.6818 18.4425 33.12 17.88ZM10.41 20L20 10.42L29.59 20H10.41ZM38 23C38 23 34 27.33 34 30C34 31.0609 34.4214 32.0783 35.1716 32.8284C35.9217 33.5786 36.9391 34 38 34C39.0609 34 40.0783 33.5786 40.8284 32.8284C41.5786 32.0783 42 31.0609 42 30C42 27.33 38 23 38 23Z"
-                    fill="#283645" />
-                  <path d="M48 40H0V43H48V40Z" fill="#283645" />
+                    fill="#" />
+                  <path d="M48 40H0V43H48V40Z" fill="#" />
                 </g>
               </svg>
             </button>
@@ -236,20 +248,20 @@
               <input class="range" type="range" min="1" max="100">
             </div>
           </li>
-          <li class="editor__list-item">
-            <button class="editor__tools-btn editor__tools-btn--contrast" type="button">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g opacity="0.3">
+          <li class="editor__list-item editor__list-item--active">
+            <button class="editor__tools-btn" type="button">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="#" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="#">
                   <path
                     d="M16 4C18.3734 4 20.6935 4.70379 22.6669 6.02236C24.6402 7.34094 26.1783 9.21509 27.0866 11.4078C27.9948 13.6005 28.2325 16.0133 27.7694 18.3411C27.3064 20.6689 26.1635 22.8071 24.4853 24.4853C22.8071 26.1635 20.6689 27.3064 18.3411 27.7694C16.0133 28.2324 13.6005 27.9948 11.4078 27.0866C9.21509 26.1783 7.34095 24.6402 6.02237 22.6668C4.70379 20.6935 4.00001 18.3734 4.00001 16C4.00001 12.8174 5.26429 9.76516 7.51473 7.51472C9.76516 5.26428 12.8174 4 16 4ZM16 0C12.8355 0 9.74207 0.938384 7.11088 2.69649C4.4797 4.45459 2.42894 6.95345 1.21793 9.87706C0.0069325 12.8007 -0.309921 16.0177 0.307443 19.1214C0.924806 22.2251 2.44866 25.0761 4.6863 27.3137C6.92394 29.5513 9.77487 31.0752 12.8786 31.6926C15.9823 32.3099 19.1993 31.9931 22.1229 30.7821C25.0466 29.5711 27.5454 27.5203 29.3035 24.8891C31.0616 22.2579 32 19.1645 32 16C32 11.7565 30.3143 7.68687 27.3137 4.68629C24.3131 1.68571 20.2435 0 16 0Z"
-                    fill="#283645" />
+                    fill="#" />
                   <path
                     d="M16 24.29C18.1536 24.1422 20.1708 23.1824 21.644 21.6046C23.1172 20.0268 23.9366 17.9486 23.9366 15.79C23.9366 13.6314 23.1172 11.5532 21.644 9.97538C20.1708 8.39759 18.1536 7.43782 16 7.29"
-                    fill="#283645" />
+                    fill="#" />
                 </g>
               </svg>
             </button>
-            <div class="editor__range-wrapper">
+            <div class="editor__range-wrapper editor__range-wrapper--active">
               <input class="range" type="range" min="1" max="100">
             </div>
           </li>
@@ -286,10 +298,10 @@
         </li>
       </ul>
       <p class="footer__copyright">
-        Разработано
+        <span>Разработано</span>
         <a class="footer__copyright-link" href="https://htmlacademy.ru">
           <svg width="27" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
-            <path fill="#2E368F"
+            <path fill="#"
               d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
           </svg>
         </a>
