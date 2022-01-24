@@ -16,7 +16,7 @@
         <a class="header__logo" href="#">
           <img src="img/logos/pink-header-logo.svg" alt="Логотип Pink" width="74" height="23">
         </a>
-        <nav class="main-nav main-nav--closed main-nav--nojs">
+        <nav class="main-nav main-nav--opened main-nav--nojs">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -64,7 +64,7 @@
             <ul class="journey__field-list journey__field-list--full-name">
               <li class="journey__field-item">
                 <label for="surname">ФАМИЛИЯ:</label>
-                <input type="text" name="surname" id="surname" placeholder="Введите вашу фамилию*" required>
+                <input type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
               </li>
               <li class="journey__field-item">
                 <label for="name">ИМЯ:</label>
@@ -111,7 +111,7 @@
         </div>
         <div class="container journey__contacts">
           <fieldset class="journey__fieldset">
-            <legend class="journey__legend">С каким приложением путешествовали?</legend>
+            <legend class="journey__legend journey__legend--contacts">контактная информация</legend>
             <ul class="journey__field-list journey__field-list--contacts">
               <li class="journey__field-item journey__field-item--contacts">
                 <label for="phone-number">НОМЕР ТЕЛЕФОНА</label>
@@ -141,7 +141,7 @@
               путешествовали?</legend>
             <ul class="journey__radio-list">
               <li class="journey__radio-item">
-                <input class="journey__radio-input" type="radio" name="software" id="for-ios" value="ios">
+                <input class="journey__radio-input" type="radio" name="software" id="for-ios" value="ios" checked>
                 <label for="for-ios">Pink для iOS</label>
               </li>
               <li class="journey__radio-item">
@@ -169,7 +169,7 @@
             Отправить форму
           </button>
           <p class="journey__note">
-            <span class="color-red">*</span> — обязательные поля
+            <span class="color-red">*</span> — обязательные <span class="journey__note-hidden">для заполнения</span> поля
           </p>
         </div>
       </form>

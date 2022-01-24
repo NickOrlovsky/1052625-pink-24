@@ -36,15 +36,23 @@
 .catalog__panorma-image {
   position: relative;
 
-  display: flex;
-
   margin: 0;
   height: auto;
 
   & img {
+    display: block;
+
     height: 100%;
     width: 100%;
     object-fit: cover;
+
+    @media (min-width: @tablet-width) {
+      min-height: 509px;
+    }
+
+    @media (min-width: @desktop-width) {
+      max-height: 506px;
+    }
   }
 }
 
@@ -186,14 +194,21 @@
 
 .catalog__like-icon {
   max-height: 15px;
+  padding: 0;
 
   background-color: transparent;
   border: none;
 
   cursor: pointer;
 
+  @media (max-width: @mobile-width-only) {
+    margin-right: 18px;
+  }
+
   @media (min-width: @tablet-width) {
     order: 2;
+
+    margin-left: 16px;
   }
 }
 

@@ -135,27 +135,10 @@
   }
 }
 
-.journey__contacts-input {
-  // position: relative;
-
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-
-  //   width: 59px;
-  //   height: 59px;
-
-  //   background-color: @pricing-border-cell;
-  //   z-index: 10;
-  // }
-}
-
 .journey__contacts-icon {
   display: none;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     position: absolute;
     top: 2px;
     right: 2px;
@@ -268,6 +251,10 @@
     text-transform: uppercase;
     line-height: 1;
 
+    @media (max-width: @mobile-width-only) {
+      padding-left: 22px;
+    }
+
     @media (min-width: @tablet-width) {
       margin-bottom: 0;
       margin-right: 20px;
@@ -342,6 +329,12 @@
     margin-bottom: 0;
 
     transform: none;
+  }
+}
+
+.journey__legend--contacts {
+  @media (max-width: @mobile-width-only) {
+    display: none;
   }
 }
 
@@ -569,6 +562,14 @@
 
 .color-red {
   color: @coral-red;
+}
+
+.journey__note-hidden {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+  }
 }
 
 .journey__modal {
