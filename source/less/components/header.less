@@ -35,8 +35,18 @@
 }
 
 .header__logo {
-  & img {
+  & svg {
     width: 74px;
     height: 23px;
+
+    fill: @basic-white;
+  }
+
+  &:hover svg {
+    fill: @coral-red;
+  }
+
+  &:active svg {
+    fill: fade(@basic-white, 30%);
   }
 }
