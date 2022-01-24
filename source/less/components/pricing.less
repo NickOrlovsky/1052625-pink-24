@@ -1,12 +1,12 @@
 .pricing {
-  background: linear-gradient(-3deg, #f2f2f2 92%, #ffffff 50%);
+  background: linear-gradient(-3deg, @background-gray 92%, @basic-white 50%);
 
   @media (min-width: @tablet-width) {
-    background: linear-gradient(-2deg, #f2f2f2 90%, #ffffff 50%);
+    background: linear-gradient(-2deg, @background-gray 90%, @basic-white 50%);
   }
 
   @media (min-width: @desktop-width) {
-    background: linear-gradient(-2deg, #f2f2f2 86%, #ffffff 50%);
+    background: linear-gradient(-2deg, @background-gray 91%, @basic-white 50%);
   }
 }
 
@@ -133,7 +133,7 @@
   display: none;
 
 
-  background-color: @background-gray;
+  background-color: transparent;
 
   @media (min-width: @tablet-width) {
     display: flex;
