@@ -1,5 +1,10 @@
 .editor {
   background-color: @background-gray;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 28px;
+    background-color: @basic-white;
+  }
 }
 
 .editor__wrapper {
@@ -8,17 +13,25 @@
   align-items: center;
 
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 43px;
 
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
+    justify-items: start;
 
     padding-top: 57px;
-    padding-bottom: 54px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 940px;
+    padding-top: 55px;
+    padding-bottom: 57px;
+
+    background-color: @background-gray;
   }
 }
 
@@ -35,8 +48,17 @@
     margin-bottom: 0;
   }
 
-  & img {
-    display: block;
+  @media (min-width: @desktop-width) {
+    padding-left: 60px;
+  }
+}
+
+.editor__image img {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    height: 400px;
   }
 }
 
@@ -45,11 +67,10 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;
 
   margin: 0;
   margin-bottom: 38px;
-  padding: 0 0 50px 0;
+  padding: 0 0 67px 0;
   width: 100%;
   max-width: 240px;
   box-sizing: border-box;
@@ -64,8 +85,9 @@
     gap: 26px;
 
     max-width: none;
+    padding-top: 6px;
     padding-bottom: 0;
-    padding-left: 45px;
+    padding-left: 39px;
     margin-bottom: 0;
 
     border-bottom: none;
@@ -73,11 +95,16 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 0;
+    padding-right: 40px;
+    padding-top: 0;
+
+    gap: 15px;
   }
 }
 
 .editor__list-item {
-  margin-right: 35px;
+  margin-right: 17px;
+  padding-left: 17px;
 
   &:last-of-type {
     margin-right: 0;
@@ -90,30 +117,42 @@
 
     width: 100%;
     padding-bottom: 24px;
+    padding-left: 0;
     margin-right: 0;
 
     border-bottom: 1px solid @editor-inner-border;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 10px;
   }
 }
 
 .editor__list-item--active .editor__range-wrapper--active {
   position: absolute;
-  top: 55px;
-  left: 8%;
+  top: 67px;
+  left: 0;
 
   display: block;
+
+  max-width: 240px;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     position: relative;
     top: 0;
     left: 0;
+
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: none;
   }
 }
 
-.editor__list-item--active .editor__tools-btn {
-  & svg {
-    fill: @coral-red;
-  }
+.editor__list-item--active .editor__tools-btn svg {
+  fill: @coral-red;
 }
 
 .editor__tools-btn {
@@ -123,12 +162,8 @@
   border: none;
   background-color: transparent;
 
-  & svg {
-    fill: fade(@basic-font, 30%);
-  }
-
   &:hover svg {
-    fill: fade(@basic-font, 50%);
+    fill: @editor-gray-dark;
   }
 
   &:active svg {
@@ -137,20 +172,41 @@
 
   @media (min-width: @tablet-width) {
     margin-right: 30px;
-
-    & svg {
-      width: 22px;
-      height: 22px;
-
-      fill: @coral-red;
-    }
   }
 
+  @media (min-width: @desktop-width) {
+    margin-right: 49px;
+  }
+}
+
+.editor__tools-btn svg {
+  fill: @editor-gray;
+
   @media (min-width: @tablet-width) {
-    & svg {
-      width: 44px;
-      height: 44px;
-    }
+    width: 22px;
+    height: 22px;
+
+    fill: @coral-red;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.editor__tools-btn--contrast svg {
+  @media (min-width: @tablet-width) {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 32px;
+    height: 32px;
+
+    padding-left: 7px;
+    margin-right: 5px;
   }
 }
 
@@ -163,18 +219,20 @@
 
   @media (min-width: @tablet-width) {
     grid-column: 2/3;
-    padding-top: 67px;
+    padding-top: 63px;
+    padding-left: 12px;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding-top: 154px;
+    padding-left: 0;
   }
 }
 
 .editor__button {
-  max-width: 280px;
-  width: 100%;
+  min-width: 280px;
   min-height: 55px;
   box-sizing: border-box;
 
@@ -187,10 +245,11 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
+    min-width: 260px;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 183px;
+    min-width: 183px;
   }
 
   &--upload {
@@ -205,6 +264,7 @@
 
     @media (min-width: @desktop-width) {
       margin-bottom: 0;
+      margin-right: 44px;
     }
   }
 
@@ -243,7 +303,11 @@
     width: 100%;
   }
 
-  & input {
-    width: 100%;
+  @media (min-width: @desktop-width) {
+    padding-right: 30px;
   }
+}
+
+.editor__range-wrapper input {
+  width: 100%;
 }

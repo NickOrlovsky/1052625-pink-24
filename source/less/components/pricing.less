@@ -2,27 +2,27 @@
   background: linear-gradient(-3deg, @background-gray 92%, @basic-white 50%);
 
   @media (min-width: @tablet-width) {
-    background: linear-gradient(-2deg, @background-gray 90%, @basic-white 50%);
+    background: linear-gradient(-3deg, @background-gray 92%, @basic-white 50%);
   }
 
   @media (min-width: @desktop-width) {
-    background: linear-gradient(-2deg, @background-gray 91%, @basic-white 50%);
+    background: linear-gradient(-5deg, @background-gray 83%, @basic-white 50%);
   }
 }
 
 .pricing__wrapper {
   box-sizing: border-box;
-  padding-top: 82px;
-  padding-bottom: 49px;
+  padding-top: 123px;
+  padding-bottom: 44px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 56px;
+    padding-top: 92px;
     padding-bottom: 70px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 56px;
-    padding-bottom: 98px;
+    padding-top: 169px;
+    padding-bottom: 94px;
   }
 }
 
@@ -33,7 +33,7 @@
 
   margin: 0;
   padding: 0;
-  margin-bottom: 45px;
+  margin-bottom: 34px;
   width: 100%;
 
   list-style: none;
@@ -80,7 +80,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: center;
-    padding: 25px 15px;
+    padding: 22px 15px;
     min-width: 153px;
     min-height: 45px;
 
@@ -106,8 +106,13 @@
 
     padding: 18px 15px;
 
+    @media (min-width: @tablet-width) {
+      padding: 15px 15px;
+    }
+
     @media (min-width: @desktop-width) {
-      padding: 23px 22px;
+      padding: 21px 21px;
+      font-size: 18px;
     }
   }
 }
@@ -127,6 +132,11 @@
     top: 30%;
     right: 40%;
   }
+
+  @media (min-width: @desktop-width) {
+    top: 21px;
+    right: 101px;
+  }
 }
 
 .pricing__side-legend {
@@ -140,24 +150,20 @@
     flex-direction: column;
     justify-content: flex-end;
   }
+}
 
-  & > p {
-    line-height: 1;
+.pricing__side-legend > p {
+  line-height: 1;
+}
 
-    @media (min-width: @tablet-width) {
-      // text-transform: ;
-    }
-  }
-
-  & p:first-of-type {
-    border-top: 2px solid @pricing-border-cell;
-  }
+.pricing__side-legend p:first-of-type {
+  border-top: 2px solid @pricing-border-cell;
 }
 
 .pricing__headline {
   position: relative;
 
-  padding: 19px 20px 35px;
+  padding: 20px 20px 30px;
   box-sizing: border-box;
 
   color: @basic-white;
@@ -171,18 +177,18 @@
   overflow: hidden;
 
   @media (min-width: @tablet-width) {
-    padding: 19px 20px 16px;
+    padding: 19px 20px 11px;
 
     text-transform: none;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 23px 20px 25px;
+    padding: 23px 20px 20px;
   }
 
   h3 {
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 3px;
 
     font-size: 16px;
     font-weight: 700;
@@ -190,6 +196,8 @@
     text-transform: uppercase;
 
     @media (min-width: @desktop-width) {
+      margin-bottom: 6px;
+
       font-size: 18px;
     }
   }
@@ -208,8 +216,8 @@
 
 .pricing__label-hit {
   position: absolute;
-  top: 10px;
-  left: -33px;
+  top: 18px;
+  left: -28px;
 
   width: 105px;
   padding: 5px 0;
@@ -218,9 +226,20 @@
   font-size: 14px;
   line-height: 1;
   font-weight: 400;
+  text-transform: uppercase;
 
   background-color: @coral-red;
   transform: rotate(-45deg);
+
+  @media (min-width: @tablet-width) {
+    top: 13px;
+    left: -32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 17px;
+    left: -25px;
+  }
 }
 
 

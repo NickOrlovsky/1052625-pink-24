@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1/">
   <title>Пинк Каталог</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-  <link rel="preload" href="css/style.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/apple.png">
@@ -110,8 +110,9 @@
   <main class="page__main">
     <h1 class="visually-hidden">Каталог фотографий наших пользователей</h1>
     <section class="intro">
-      <div class="intro__wrapper intro__slogan-wrapper container">
-        <p class="intro__slogan">Фотографии пользователей</p>
+      <h2 class="visually-hidden">Фото наших пользователей</h2>
+      <div class="intro__wrapper intro__slogan-catalog-wrap container">
+        <p class="intro__slogan intro__slogan--large">Фотографии пользователей</p>
       </div>
     </section>
     <section class="catalog">
@@ -123,7 +124,7 @@
           <div class="catalog__label-wrapper container">
             <p class="catalog__label">ПАНОРАМА ДНЯ</p>
           </div>
-          <div class="catalog__panorma-image-wrapper">
+          <a href="#" class="catalog__panorma-image-wrapper">
             <picture>
               <source media="(min-width: 1200px)"
                 srcset="img/catalog/panorama/panorama-desktop.jpg, img/catalog/panorama/panorama-desktop@2x.jpg 2x">
@@ -132,12 +133,13 @@
               <img src="img/catalog/panorama/panorama-mobile.jpg"
                 srcset="img/catalog/panorama/panorama-mobile@2x.jpg 2x" alt="Фото моста" width="320" height="137">
             </picture>
-          </div>
+          </a>
           <div class="container">
-            <div class="catalog__inner-wrapper">
+            <div class="catalog__inner-wrapper catalog__inner-wrapper--panorama">
               <b class="catalog__name">Анна <span class="catalog__time">(5 минут
                   назад)</span></b>
-              <p class="catalog__comment">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую
+              <p class="catalog__comment catalog__comment--panorama">Прыгать или нет? Напишите в комментарии свой совет
+                и смотрите прямую
                 трансляцию в перископе, задавайте свои вопросы!</p>
               <div class="catalog__like-wrapper catalog__like-wrapper--panorama">
                 <button class="catalog__like-icon" type="button">
@@ -155,7 +157,7 @@
         <div class="catalog__list-wrapper container">
           <ul class="catalog__list">
             <li class="catalog__list-item">
-              <p class="catalog__image">
+              <a href="#" class="catalog__image">
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)"
                     srcset="img/catalog/white-car/white-car-desktop.webp, img/catalog/white-car/white-car-desktop@2x.webp 2x">
@@ -171,7 +173,7 @@
                     srcset="img/catalog/white-car/white-car-mobile@2x.jpg 2x" alt="Фото белой машины" width="280"
                     height="180">
                 </picture>
-              </p>
+              </a>
               <div class="catalog__inner-wrapper">
                 <div class="catalog__content-wrapper">
                   <b class="catalog__name">Левон <span class="catalog__time">(5
@@ -191,7 +193,7 @@
               </div>
             </li>
             <li class="catalog__list-item">
-              <p class="catalog__image">
+              <a href="#" class="catalog__image">
                 <picture>
                   <source media="(min-width: 1200px)"
                     srcset="img/catalog/drum/drum-desktop.jpg, img/catalog/drum/drum-desktop@2x.jpg 2x">
@@ -200,7 +202,7 @@
                   <img src="img/catalog/drum/drum-mobile.jpg" srcset="img/catalog/drum/drum-mobile@2x.jpg 2x"
                     alt="Фото моста" width="280" height="180">
                 </picture>
-              </p>
+              </a>
               <div class="catalog__inner-wrapper">
                 <div class="catalog__content-wrapper">
                   <b class="catalog__name">Антон <span class="catalog__time">(12
@@ -220,7 +222,7 @@
               </div>
             </li>
             <li class="catalog__list-item">
-              <p class="catalog__image">
+              <a href="#" class="catalog__image">
                 <picture>
                   <source media="(min-width: 1200px)"
                     srcset="img/catalog/roof/roof-desktop.jpg, img/catalog/roof/roof-desktop@2x.jpg 2x">
@@ -229,7 +231,7 @@
                   <img src="img/catalog/roof/roof-mobile.jpg" srcset="img/catalog/roof/roof-mobile@2x.jpg 2x"
                     alt="Фото крыши" width="280" height="180">
                 </picture>
-              </p>
+              </a>
               <div class="catalog__inner-wrapper">
                 <div class="catalog__content-wrapper"><b class="catalog__name">Борис <span class="catalog__time">(20
                       часов назад)</span></b>
@@ -248,7 +250,7 @@
               </div>
             </li>
             <li class="catalog__list-item">
-              <p class="catalog__image">
+              <a href="#" class="catalog__image">
                 <picture>
                   <source media="(min-width: 1200px)"
                     srcset="img/catalog/bahcha/bahcha-desktop.jpg, img/catalog/bahcha/bahcha-desktop@2x.jpg 2x">
@@ -257,7 +259,7 @@
                   <img src="img/catalog/bahcha/bahcha-mobile.jpg" srcset="img/catalog/bahcha/bahcha-mobile@2x.jpg 2x"
                     alt="Фото кубанская бахча" width="280" height="180">
                 </picture>
-              </p>
+              </a>
               <div class="catalog__inner-wrapper">
                 <div class="catalog__content-wrapper">
                   <b class="catalog__name">Сергей <span class="catalog__time">(25
@@ -277,7 +279,7 @@
               </div>
             </li>
             <li class="catalog__list-item">
-              <p class="catalog__image">
+              <a href="#" class="catalog__image">
                 <picture>
                   <source media="(min-width: 1200px)"
                     srcset="img/catalog/mountains/mountains-desktop.jpg, img/catalog/mountains/mountains-desktop@2x.jpg 2x">
@@ -286,7 +288,7 @@
                   <img src="img/catalog/mountains/mountains-mobile.jpg"
                     srcset="img/catalog/mountains/mountains-mobile@2x.jpg 2x" alt="Фото гор" width="280" height="180">
                 </picture>
-              </p>
+              </a>
               <div class="catalog__inner-wrapper">
                 <div class="catalog__content-wrapper">
                   <b class="catalog__name">Максим <span class="catalog__time">(40
@@ -306,7 +308,7 @@
               </div>
             </li>
             <li class="catalog__list-item">
-              <p class="catalog__image">
+              <a href="#" class="catalog__image">
                 <picture>
                   <source media="(min-width: 1200px)"
                     srcset="img/catalog/plane/plane-desktop.jpg, img/catalog/plane/plane-desktop@2x.jpg 2x">
@@ -315,7 +317,7 @@
                   <img src="img/catalog/plane/plane-mobile.jpg" srcset="img/catalog/plane/plane-mobile@2x.jpg 2x"
                     alt="Фото крыла самолета" width="280" height="180">
                 </picture>
-              </p>
+              </a>
               <div class="catalog__inner-wrapper">
                 <div class="catalog__content-wrapper">
                   <b class="catalog__name">Надежда <span class="catalog__time">(45
@@ -336,7 +338,8 @@
             </li>
           </ul>
         </div>
-        <p class="catalog__text container">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+        <p class="catalog__text catalog__text--bottom container">Затмите их всех!<br>Выкладывайте все, что накопилось в
+          телефоне!</p>
       </div>
     </section>
     <section class="editor">
@@ -347,7 +350,7 @@
             <source media="(min-width: 660px)"
               srcset="img/editor/winter-road-tablet.jpg, img/editor/winter-road-tablet@2x.jpg 2x">
             <img src="img/editor/winter-road-mobile.jpg" srcset="img/editor/winter-road-mobile@2x.jpg 2x"
-              alt="Заснеженная дорога" wight="280" height="374">
+              alt="Заснеженная дорога" width="280" height="374">
           </picture>
         </p>
         <ul class="editor__list">
@@ -379,7 +382,7 @@
             </div>
           </li>
           <li class="editor__list-item editor__list-item--active">
-            <button class="editor__tools-btn" type="button">
+            <button class="editor__tools-btn editor__tools-btn--contrast" type="button">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="#" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="#">
                   <path
@@ -462,8 +465,8 @@
       </p>
       <ul class="footer__social-list">
         <li class="footer__social-item">
-          <a class="footer__social-link" href="#"><img src="img/social-icons/twitter.svg" alt="Логотип Twitter"
-              width="18" height="14">
+          <a class="footer__social-link" href="#">
+            <img src="img/social-icons/twitter.svg" alt="Логотип Twitter" width="18" height="14">
           </a>
         </li>
         <li class="footer__social-item">
@@ -480,9 +483,10 @@
       <p class="footer__copyright">
         <span>Разработано</span>
         <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg width="27" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
-            <path fill="#"
-              d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
+          <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"
+              fill="#" />
           </svg>
         </a>
       </p>

@@ -4,15 +4,15 @@
 // .slider-list__item {
 // }
 
-.slider__buttons {
+.slider-buttons {
   text-align: center;
 }
 
-.slider__button {
+.slider-buttons__item {
   width: 6px;
   height: 6px;
   padding: 0;
-  margin-right: 19px;
+  margin-right: 15px;
   box-sizing: content-box;
 
   background-color: @slider-btn;
@@ -29,7 +29,7 @@
   }
 }
 
-.slider__button--current {
+.slider-buttons__item--current {
   background-color: @basic-white;
   border: 3px solid @basic-font;
 
@@ -38,7 +38,7 @@
   }
 }
 
-.slider__button-scroll {
+.slider-buttons__scroll {
   position: absolute;
   top: 50%;
 
@@ -48,24 +48,25 @@
   border: none;
   cursor: pointer;
 
-  & svg {
-    fill: fade(@basic-font, 30%);
-  }
-
   &:hover svg {
-    fill: fade(@basic-font, 60%);
+    fill: @slider-gray;
   }
 
   &:active svg {
-    fill: fade(@basic-font, 10%);
+    fill: @slider-pale;
   }
 }
 
-.slider__button-scroll--left {
-  left: -10px;
+.slider-buttons__scroll svg {
+  fill: @editor-gray;
 }
 
-.slider__button-scroll--right {
+.slider-buttons__scroll--left {
+  left: 10px;
+  top: 52%;
+}
+
+.slider-buttons__scroll--right {
   right: -10px;
 
   transform: rotate(180deg);

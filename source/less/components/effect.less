@@ -17,7 +17,6 @@
 .effect__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
   padding-top: 54px;
   padding-bottom: 10px;
@@ -53,8 +52,21 @@
   font-size: 30px;
   font-weight: 700;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 42px;
+    padding-right: 101px;
+    line-height: 1.2;
+    margin-bottom: 11px;
+  }
+
   @media (min-width: @desktop-width) {
-    margin-bottom: 37px;
+    margin-bottom: 23px;
+  }
+}
+
+.effect__text-wrapper {
+  @media (min-width: @desktop-width) {
+    padding-top: 50px;
   }
 }
 
@@ -64,10 +76,15 @@
 
   font-size: 14px;
 
+  @media (min-width: @tablet-width) {
+    margin: 0 0 10px;
+  }
+
   @media (min-width: @desktop-width) {
-    margin-bottom: 47px;
+    margin-bottom: 34px;
 
     font-size: 18px;
+    line-height: 30px;
   }
 }
 
